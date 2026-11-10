@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b1020" />
+  <meta name="description" content="Personal portfolio — about, skills, projects and experience." />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="data.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <div class="glow glow-one" aria-hidden="true"></div>
+  <div class="glow glow-two" aria-hidden="true"></div>
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="#top" class="wordmark" aria-label="Back to top"><span class="brand-symbol">✳</span><span id="brand-name">Your Name</span><span class="brand-period">.</span></a>
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu"><span></span><span></span><span></span></button>
+      <div class="nav-links" id="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#contact" class="nav-contact">Let's talk <span aria-hidden="true">↗</span></a>
+        <button class="theme-switch" id="theme-switch" type="button" aria-label="Toggle dark and light theme" title="Toggle theme">☀</button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero container" aria-labelledby="hero-name">
+      <div class="hero-main">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span> PERSONAL PORTFOLIO <span class="star">✦</span></p>
+          <p id="availability" class="availability"></p>
+          <h1>Hi, I'm <span id="hero-name" class="gradient-text">Your Name</span><span class="dot">.</span></h1>
+          <p class="hero-role" id="hero-role">Your Professional Title</p>
+          <p class="hero-tagline" id="hero-tagline">Your standout one-line professional introduction.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">Explore my work <span aria-hidden="true">↗</span></a>
+            <a class="btn btn-outline" href="#contact">Contact me <span aria-hidden="true">→</span></a>
+            <a class="btn btn-outline hide" id="resume-link" href="#" download>Download CV <span aria-hidden="true">↓</span></a>
+          </div>
+          <div class="hero-social" id="hero-social" aria-label="Social links"></div>
+        </div>
+        <div class="hero-visual" aria-label="Personal introduction graphic">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="profile-card">
+            <div class="profile-corner">✦</div>
+            <div id="profile-picture" class="avatar" aria-hidden="true">YN</div>
+            <span class="profile-label">NICE TO MEET YOU</span>
+            <strong id="profile-name">Your Name</strong>
+            <span id="profile-location" class="profile-location">Your City, Country</span>
+          </div>
+          <div class="float-tag tag-one">CREATIVE <span>✧</span></div>
+          <div class="float-tag tag-two">DETAIL-DRIVEN <span>✳</span></div>
+        </div>
+      </div>
+      <div class="scroll-hint">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></div>
+    </section>
+
+    <section class="section container" id="about" aria-labelledby="about-title">
+      <div class="section-title-row"><div><p class="eyebrow">01 / GET TO KNOW ME</p><h2 id="about-title">A little <em>about me</em><span class="dot">.</span></h2></div><span class="section-decoration">✳</span></div>
+      <div class="about-layout"><div class="large-quote">"Great work begins with <span>curiosity.</span>"</div><div><div id="about-body" class="about-body"></div><p class="location-line">⌁ <span id="about-location">Your City, Country</span></p></div></div>
+    </section>
+
+    <section class="section section-tinted" id="skills" aria-labelledby="skills-title">
+      <div class="container"><div class="section-title-row"><div><p class="eyebrow">02 / WHAT I BRING</p><h2 id="skills-title">Skills &amp; <em>expertise</em><span class="dot">.</span></h2></div></div><div id="skills-grid" class="skills-grid"></div></div>
+    </section>
+
+    <section class="section container" id="projects" aria-labelledby="projects-title">
+      <div class="section-title-row"><div><p class="eyebrow">03 / SELECTED WORK</p><h2 id="projects-title">Featured <em>projects</em><span class="dot">.</span></h2></div><p class="section-intro">A selection of the work I'm proud of. Replace the examples with your own projects.</p></div><div id="projects-grid" class="projects-grid"></div>
+    </section>
+
+    <section class="section section-tinted" id="experience" aria-labelledby="experience-title">
+      <div class="container"><div class="section-title-row"><div><p class="eyebrow">04 / MY JOURNEY</p><h2 id="experience-title">Work <em>experience</em><span class="dot">.</span></h2></div></div><div id="experience-list" class="timeline"></div></div>
+    </section>
+
+    <section class="section container" id="education" aria-labelledby="education-title">
+      <div class="section-title-row"><div><p class="eyebrow">05 / KNOWLEDGE</p><h2 id="education-title">Education &amp; <em>certifications</em><span class="dot">.</span></h2></div></div><div class="education-grid"><div><h3 class="subsection-title">Education</h3><div id="education-list" class="education-list"></div></div><div id="cert-wrap"><h3 class="subsection-title">Certifications</h3><div id="cert-list" class="education-list"></div></div></div>
+    </section>
+
+    <section class="section contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="container contact-layout"><div><p class="eyebrow">06 / GET IN TOUCH</p><h2 id="contact-title">Let's make<br/><em>something great</em><span class="dot">.</span></h2><p id="contact-intro" class="contact-intro">Have an opportunity, collaboration, or question? I'd love to hear from you.</p><a class="big-email" id="contact-email" href="mailto:you@example.com">you@example.com <span aria-hidden="true">↗</span></a></div><div class="contact-card"><p class="contact-card-label">FIND ME HERE</p><div id="contact-links" class="contact-links"></div><p class="privacy-note">Only add contact details you are comfortable making public.</p></div></div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="container footer-inner"><a class="wordmark" href="#top"><span class="brand-symbol">✳</span><span id="footer-name">Your Name</span><span class="brand-period">.</span></a><p>© <span id="year"></span> <span id="copyright-name">Your Name</span>. Made with intention.</p><a href="#top" class="back-to-top">Back to top ↑</a></div></footer>
+</body>
+</html>

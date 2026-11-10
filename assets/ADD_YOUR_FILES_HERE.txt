@@ -1,0 +1,3 @@
+Optional files:
+profile.jpg  -> set profilePhoto: "assets/profile.jpg" in data.js
+resume.pdf   -> set resumeFile: "assets/resume.pdf" in data.js
