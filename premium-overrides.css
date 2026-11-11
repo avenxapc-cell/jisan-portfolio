@@ -1,0 +1,274 @@
+/* =============================================================
+   JISAN SIKDER | SIGNATURE PORTFOLIO — PROFESSIONAL EDITION V2
+   Add AFTER style.css. Do not replace your original style.css.
+   Compatible with current portfolio HTML / data.js / script.js.
+   ============================================================= */
+
+/* 01 — Restrained executive palette */
+:root {
+  --bg: #080e1b;
+  --bg-tinted: #101a2c;
+  --card: #152039;
+  --card2: #1b2945;
+  --text: #f4f6ff;
+  --muted: #a6b6d2;
+  --border: rgba(192, 210, 250, .14);
+  --accent: #c4f38c;
+  --purple: #b6a6ff;
+  --blue: #8bd0f9;
+  --shadow: 0 28px 70px rgba(1, 5, 18, .33);
+  --premium-line: linear-gradient(90deg, var(--accent), var(--purple), var(--blue));
+}
+:root[data-theme="light"] {
+  --bg: #f7f9fd;
+  --bg-tinted: #eff3fa;
+  --card: #fff;
+  --card2: #f1f4fb;
+  --text: #1a2743;
+  --muted: #566680;
+  --border: rgba(33, 52, 91, .15);
+  --accent: #39651b;
+  --purple: #6a50c7;
+  --blue: #286d9c;
+  --shadow: 0 24px 60px rgba(28, 44, 80, .10);
+}
+
+/* 02 — Page atmosphere and more deliberate typography */
+body {
+  background:
+    radial-gradient(ellipse 55% 36% at 96% 10%, rgba(111, 98, 218, .16), transparent 75%),
+    radial-gradient(ellipse 48% 32% at -12% 51%, rgba(53, 102, 191, .095), transparent 78%),
+    var(--bg);
+  letter-spacing: -.008em;
+  -webkit-font-smoothing: antialiased;
+}
+:root[data-theme="light"] body {
+  background:
+    radial-gradient(ellipse 62% 30% at 92% 12%, rgba(164, 155, 235, .10), transparent 75%),
+    var(--bg);
+}
+h1, h2, h3 { text-wrap: balance; }
+a, button { -webkit-tap-highlight-color: transparent; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+
+/* 03 — Top navigation: subtle glass and active-feeling links */
+.site-header {
+  border-bottom: 1px solid var(--border);
+  background: color-mix(in srgb, var(--bg) 83%, transparent);
+  backdrop-filter: saturate(135%) blur(20px);
+  -webkit-backdrop-filter: saturate(135%) blur(20px);
+  box-shadow: 0 12px 38px rgba(1, 6, 18, .12);
+}
+.wordmark { letter-spacing: -.045em; }
+.brand-symbol, .brand-period { text-shadow: 0 0 22px rgba(195, 243, 140, .2); }
+.nav-links > a:not(.nav-contact) { position: relative; }
+.nav-links > a:not(.nav-contact)::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 100%; bottom: -8px;
+  height: 2px;
+  background: var(--premium-line);
+  border-radius: 20px;
+  transition: right .25s ease;
+}
+.nav-links > a:not(.nav-contact):hover::after { right: 0; }
+.theme-switch { transition: transform .25s ease, border-color .25s ease; }
+
+/* 04 — Hero: intentional editorial composition */
+.hero { isolation: isolate; }
+.hero::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  width: min(60vw, 780px);
+  height: min(60vw, 780px);
+  right: -14%; top: -12%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(145, 128, 247, .14), transparent 68%);
+}
+.eyebrow { letter-spacing: .21em; }
+.availability { letter-spacing: .04em; }
+.hero h1 {
+  letter-spacing: -.079em;
+  line-height: 1.035;
+  text-wrap: balance;
+}
+.gradient-text {
+  background: linear-gradient(108deg, var(--text) 0%, #c5b7ff 55%, #8cd5fb 96%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+:root[data-theme="light"] .gradient-text {
+  background: linear-gradient(108deg, var(--text) 0%, #7461c8 58%, #337cad 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.hero-role { font-weight: 700; letter-spacing: -.035em; }
+.hero-tagline { max-width: 550px; line-height: 1.9; }
+.scroll-hint { opacity: .88; }
+
+/* 05 — Confident call-to-action buttons */
+.btn, .nav-links > a.nav-contact {
+  border-radius: 999px;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease, background .25s ease;
+}
+.btn-primary, .nav-links > a.nav-contact {
+  background: linear-gradient(115deg, #c6fa89 0%, #aeea99 100%);
+  color: #102020;
+  box-shadow: 0 9px 30px rgba(168, 231, 124, .14);
+}
+.btn-outline { border-color: color-mix(in srgb, var(--border) 90%, var(--purple)); }
+.btn-outline:hover { background: color-mix(in srgb, var(--purple) 9%, transparent); }
+.hero-social a { text-underline-offset: 6px; transition: color .2s ease; }
+
+/* 06 — Signature personal profile card */
+.profile-card {
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 22% 8%, rgba(181, 164, 255, .12), transparent 54%),
+    linear-gradient(155deg, var(--card2), var(--card) 78%);
+  border: 1px solid color-mix(in srgb, var(--purple) 35%, var(--border));
+  box-shadow: 0 35px 85px rgba(1, 5, 18, .39), 0 0 0 1px rgba(255, 255, 255, .02);
+  transition: transform .4s cubic-bezier(.2,.75,.3,1), box-shadow .4s ease, border-color .4s ease;
+}
+.profile-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(150deg, rgba(255,255,255,.08), transparent 35%);
+  pointer-events: none;
+}
+.profile-card::after {
+  content: "";
+  position: absolute;
+  left: 22%; right: 22%; bottom: 0;
+  height: 2px;
+  background: var(--premium-line);
+  opacity: .76;
+}
+.avatar {
+  width: 142px;
+  height: 142px;
+  box-shadow: 0 0 0 5px rgba(185, 169, 255, .10), 0 14px 38px rgba(4, 8, 25, .22);
+}
+.avatar img { transition: transform .5s ease; }
+.float-tag {
+  background: color-mix(in srgb, var(--card) 94%, transparent);
+  border-color: color-mix(in srgb, var(--purple) 28%, var(--border));
+  backdrop-filter: blur(13px);
+  -webkit-backdrop-filter: blur(13px);
+  box-shadow: 0 16px 34px rgba(0, 5, 18, .18);
+}
+.orbit { border-color: color-mix(in srgb, var(--purple) 18%, transparent); }
+
+/* 07 — Consistent section rhythm and polished headlines */
+.section { padding-block: 112px; }
+.section-title-row { margin-bottom: 48px; }
+.section-title-row h2, .contact-section h2 { letter-spacing: -.065em; }
+.section-title-row h2 em, .contact-section h2 em { color: var(--purple); }
+.large-quote { text-wrap: balance; }
+.about-body p { line-height: 2; }
+.section-tinted { background: color-mix(in srgb, var(--bg-tinted) 96%, transparent); }
+
+/* 08 — Skills: designed like capability panels, not generic boxes */
+.skills-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.skill-card, .project-card, .education-item, .contact-card {
+  border: 1px solid var(--border);
+  background: linear-gradient(150deg, var(--card) 0%, var(--card2) 165%);
+  box-shadow: 0 8px 30px rgba(0, 6, 22, .10);
+  transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+}
+.skill-card {
+  position: relative;
+  overflow: hidden;
+  padding: 32px;
+  min-height: 225px;
+  border-radius: 22px;
+}
+.skill-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 32px;
+  width: 55px; height: 3px;
+  border-radius: 0 0 6px 6px;
+  background: var(--premium-line);
+}
+.skill-card h3 { font-size: 20px; letter-spacing: -.035em; }
+.skill-number { letter-spacing: .13em; }
+.tag {
+  background: color-mix(in srgb, var(--card2) 55%, transparent);
+  color: var(--muted);
+  border-color: color-mix(in srgb, var(--border) 78%, transparent);
+  transition: color .2s ease, border-color .2s ease;
+}
+
+/* 09 — Project case study: more emphasis on real work */
+.project-card { padding: 36px; border-radius: 24px; }
+.project-card .project-mark {
+  background: linear-gradient(135deg, rgba(173, 154, 250, .17), rgba(122, 210, 252, .06));
+  border-color: color-mix(in srgb, var(--purple) 34%, var(--border));
+}
+.project-card h3 { font-size: clamp(24px, 2.4vw, 29px); }
+.project-card p { line-height: 1.85; }
+.project-links a { text-underline-offset: 5px; }
+.projects-grid > .project-card:only-child { grid-column: 1 / -1; max-width: 760px; }
+
+/* 10 — Experience, education, and contact: clean and readable */
+.timeline-item::before {
+  box-shadow: 0 0 0 5px var(--bg-tinted), 0 0 15px rgba(181, 239, 143, .18);
+}
+.education-item { border-radius: 18px; }
+.contact-card { border-radius: 23px; }
+.big-email { transition: color .25s ease; }
+.big-email:hover { color: var(--purple); }
+.footer { background: color-mix(in srgb, var(--bg-tinted) 42%, transparent); }
+
+/* 11 — Micro-interactions for mouse / trackpad users only */
+@media (hover: hover) and (pointer: fine) {
+  .btn:hover, .nav-links > a.nav-contact:hover { transform: translateY(-3px); }
+  .btn-primary:hover, .nav-links > a.nav-contact:hover { box-shadow: 0 14px 32px rgba(172, 233, 130, .24); }
+  .profile-card:hover {
+    transform: rotate(0deg) translateY(-7px);
+    border-color: color-mix(in srgb, var(--purple) 65%, var(--border));
+    box-shadow: 0 44px 95px rgba(1, 5, 18, .47), 0 0 50px rgba(152, 130, 243, .10);
+  }
+  .profile-card:hover .avatar img { transform: scale(1.055); }
+  .skill-card:hover, .project-card:hover, .contact-card:hover {
+    transform: translateY(-5px);
+    border-color: color-mix(in srgb, var(--purple) 58%, var(--border));
+    box-shadow: 0 20px 45px rgba(1, 5, 18, .20);
+  }
+  .skill-card:hover .tag { border-color: color-mix(in srgb, var(--purple) 33%, var(--border)); }
+  .education-item:hover { border-color: var(--purple); }
+  .theme-switch:hover { transform: rotate(12deg); border-color: var(--purple); }
+}
+
+/* 12 — Mobile usability stays first-class */
+@media (max-width: 980px) {
+  .hero::after { right: -25%; }
+}
+@media (max-width: 760px) {
+  .section { padding-block: 76px; }
+  .skills-grid { grid-template-columns: 1fr; }
+  .skill-card { min-height: auto; padding: 26px; }
+  .project-card { padding: 27px; }
+  .profile-card { box-shadow: 0 23px 56px rgba(1, 5, 18, .28); }
+  .nav-links > a:not(.nav-contact)::after { display: none; }
+  .hero::after { width: 95%; height: 58%; right: -42%; top: 7%; }
+}
+@media (max-width: 400px) {
+  .avatar { width: 135px; height: 135px; }
+  .profile-card { width: 300px; }
+  .hero h1 { letter-spacing: -.065em; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+}
