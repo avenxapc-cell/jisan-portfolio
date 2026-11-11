@@ -8,7 +8,7 @@ window.portfolioData = {
   introduction: "I'm a dedicated Customer Support Specialist and Web Development Enthusiast, passionate about solving problems, delivering exceptional customer experiences, and exploring modern technologies. I believe in continuous learning, creativity, and turning ideas into meaningful digital solutions.",
   location: "Dhaka, Bangladesh",
   email: "jisansupportagent2824@gmail.com",
-  phone: "018******63", // optional; avoid publishing personal phone numbers unless you want them public
+  phone: "01869459363", // optional; avoid publishing personal phone numbers unless you want them public
   profilePhoto: "assets/profile.png", // optional: e.g. "assets/profile.jpg" (add the image to assets/)
   resumeFile: "", // optional: e.g. "assets/resume.pdf" (add the PDF to assets/)
   github: "https://github.com/avenxapc-cell",
