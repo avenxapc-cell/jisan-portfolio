@@ -58,7 +58,7 @@ My goal is simple: To combine creativity, technology, and communication to make 
     {
       number: "01", name: "Personal Portfolio Website", type: "WEB DEVELOPMENT",
       description: "Designed and developed a responsive personal portfolio website to showcase my professional profile, technical skills, and projects.",
-      technologies: ["HTML", "CSS", "JavaScript"], live: "", source: ""
+      technologies: ["HTML", "CSS", "JavaScript"], live: "https://myportfoliovercelready.vercel.app/", source: "https://github.com/avenxapc-cell/jisan-portfolio"
     },
   ],
   experience: [
