@@ -10,7 +10,7 @@ window.portfolioData = {
   email: "jisansupportagent2824@gmail.com",
   phone: "01869459363", // optional; avoid publishing personal phone numbers unless you want them public
   profilePhoto: "assets/profile.png", // optional: e.g. "assets/profile.jpg" (add the image to assets/)
-  resumeFile: "", // optional: e.g. "assets/resume.pdf" (add the PDF to assets/)
+  resumeFile: "assets/resume.pdf", // optional: e.g. "assets/resume.pdf" (add the PDF to assets/)
   github: "https://github.com/avenxapc-cell",
   linkedin: "https://www.linkedin.com/in/jisan-sikder-04363744a/",
   website: "", // optional
